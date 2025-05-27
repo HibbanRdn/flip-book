@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global reset & prevent overflow */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  background-color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background gradasi bulat detak jantung */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle, rgba(255, 105, 180, 0.6) 0%, white 85%);
+  animation: smoothHeartbeat 6500ms ease-in-out infinite;
+}
+
+@keyframes smoothHeartbeat {
+  0% { background: radial-gradient(circle, rgba(255, 105, 180, 0.50) 15.00%, white 85%); }
+  1% { background: radial-gradient(circle, rgba(255, 105, 180, 0.53) 15.15%, white 84.85%); }
+  2% { background: radial-gradient(circle, rgba(255, 105, 180, 0.56) 15.30%, white 84.70%); }
+  3% { background: radial-gradient(circle, rgba(255, 105, 180, 0.59) 15.45%, white 84.55%); }
+  4% { background: radial-gradient(circle, rgba(255, 105, 180, 0.62) 15.60%, white 84.40%); }
+  5% { background: radial-gradient(circle, rgba(255, 105, 180, 0.65) 15.75%, white 84.25%); }
+  6% { background: radial-gradient(circle, rgba(255, 105, 180, 0.68) 15.90%, white 84.10%); }
+  7% { background: radial-gradient(circle, rgba(255, 105, 180, 0.71) 16.05%, white 83.95%); }
+  8% { background: radial-gradient(circle, rgba(255, 105, 180, 0.74) 16.20%, white 83.80%); }
+  9% { background: radial-gradient(circle, rgba(255, 105, 180, 0.77) 16.35%, white 83.65%); }
+  10% { background: radial-gradient(circle, rgba(255, 105, 180, 0.80) 16.50%, white 83.50%); }
+  11% { background: radial-gradient(circle, rgba(255, 105, 180, 0.83) 16.65%, white 83.35%); }
+  12% { background: radial-gradient(circle, rgba(255, 105, 180, 0.86) 16.80%, white 83.20%); }
+  13% { background: radial-gradient(circle, rgba(255, 105, 180, 0.89) 16.95%, white 83.05%); }
+  14% { background: radial-gradient(circle, rgba(255, 105, 180, 0.92) 17.10%, white 82.90%); }
+  15% { background: radial-gradient(circle, rgba(255, 105, 180, 0.95) 17.25%, white 82.75%); }
+  16% { background: radial-gradient(circle, rgba(255, 105, 180, 0.98) 17.40%, white 82.60%); }
+  17% { background: radial-gradient(circle, rgba(255, 105, 180, 1.00) 17.55%, white 82.45%); }
+  18% { background: radial-gradient(circle, rgba(255, 105, 180, 0.98) 17.70%, white 82.30%); }
+  19% { background: radial-gradient(circle, rgba(255, 105, 180, 0.95) 17.85%, white 82.15%); }
+  20% { background: radial-gradient(circle, rgba(255, 105, 180, 0.92) 18.00%, white 82.00%); }
+  21% { background: radial-gradient(circle, rgba(255, 105, 180, 0.89) 18.15%, white 81.85%); }
+  22% { background: radial-gradient(circle, rgba(255, 105, 180, 0.86) 18.30%, white 81.70%); }
+  23% { background: radial-gradient(circle, rgba(255, 105, 180, 0.83) 18.45%, white 81.55%); }
+  24% { background: radial-gradient(circle, rgba(255, 105, 180, 0.80) 18.60%, white 81.40%); }
+  25% { background: radial-gradient(circle, rgba(255, 105, 180, 0.77) 18.75%, white 81.25%); }
+  26% { background: radial-gradient(circle, rgba(255, 105, 180, 0.74) 18.90%, white 81.10%); }
+  27% { background: radial-gradient(circle, rgba(255, 105, 180, 0.71) 19.05%, white 80.95%); }
+  28% { background: radial-gradient(circle, rgba(255, 105, 180, 0.68) 19.20%, white 80.80%); }
+  29% { background: radial-gradient(circle, rgba(255, 105, 180, 0.65) 19.35%, white 80.65%); }
+  30% { background: radial-gradient(circle, rgba(255, 105, 180, 0.62) 19.50%, white 80.50%); }
+  31% { background: radial-gradient(circle, rgba(255, 105, 180, 0.59) 19.65%, white 80.35%); }
+  32% { background: radial-gradient(circle, rgba(255, 105, 180, 0.56) 19.80%, white 80.20%); }
+  33% { background: radial-gradient(circle, rgba(255, 105, 180, 0.53) 19.95%, white 80.05%); }
+  34% { background: radial-gradient(circle, rgba(255, 105, 180, 0.50) 20.10%, white 79.90%); }
+  35% { background: radial-gradient(circle, rgba(255, 105, 180, 0.47) 20.25%, white 79.75%); }
+  36% { background: radial-gradient(circle, rgba(255, 105, 180, 0.44) 20.40%, white 79.60%); }
+  37% { background: radial-gradient(circle, rgba(255, 105, 180, 0.41) 20.55%, white 79.45%); }
+  38% { background: radial-gradient(circle, rgba(255, 105, 180, 0.38) 20.70%, white 79.30%); }
+  39% { background: radial-gradient(circle, rgba(255, 105, 180, 0.35) 20.85%, white 79.15%); }
+  40% { background: radial-gradient(circle, rgba(255, 105, 180, 0.32) 21.00%, white 79.00%); }
+  41% { background: radial-gradient(circle, rgba(255, 105, 180, 0.29) 21.15%, white 78.85%); }
+  42% { background: radial-gradient(circle, rgba(255, 105, 180, 0.26) 21.30%, white 78.70%); }
+  43% { background: radial-gradient(circle, rgba(255, 105, 180, 0.23) 21.45%, white 78.55%); }
+  44% { background: radial-gradient(circle, rgba(255, 105, 180, 0.20) 21.60%, white 78.40%); }
+  45% { background: radial-gradient(circle, rgba(255, 105, 180, 0.17) 21.75%, white 78.25%); }
+  46% { background: radial-gradient(circle, rgba(255, 105, 180, 0.14) 21.90%, white 78.10%); }
+  47% { background: radial-gradient(circle, rgba(255, 105, 180, 0.11) 22.05%, white 77.95%); }
+  48% { background: radial-gradient(circle, rgba(255, 105, 180, 0.08) 22.20%, white 77.80%); }
+  49% { background: radial-gradient(circle, rgba(255, 105, 180, 0.05) 22.35%, white 77.65%); }
+  50% { background: radial-gradient(circle, rgba(255, 105, 180, 0.02) 22.50%, white 77.50%); }
+  51% { background: radial-gradient(circle, rgba(255, 105, 180, 0.05) 22.65%, white 77.35%); }
+  52% { background: radial-gradient(circle, rgba(255, 105, 180, 0.08) 22.80%, white 77.20%); }
+  53% { background: radial-gradient(circle, rgba(255, 105, 180, 0.11) 22.95%, white 77.05%); }
+  54% { background: radial-gradient(circle, rgba(255, 105, 180, 0.14) 23.10%, white 76.90%); }
+  55% { background: radial-gradient(circle, rgba(255, 105, 180, 0.17) 23.25%, white 76.75%); }
+  56% { background: radial-gradient(circle, rgba(255, 105, 180, 0.20) 23.40%, white 76.60%); }
+  57% { background: radial-gradient(circle, rgba(255, 105, 180, 0.23) 23.55%, white 76.45%); }
+  58% { background: radial-gradient(circle, rgba(255, 105, 180, 0.26) 23.70%, white 76.30%); }
+  59% { background: radial-gradient(circle, rgba(255, 105, 180, 0.29) 23.85%, white 76.15%); }
+  60% { background: radial-gradient(circle, rgba(255, 105, 180, 0.32) 24.00%, white 76.00%); }
+  61% { background: radial-gradient(circle, rgba(255, 105, 180, 0.35) 24.15%, white 75.85%); }
+  62% { background: radial-gradient(circle, rgba(255, 105, 180, 0.38) 24.30%, white 75.70%); }
+  63% { background: radial-gradient(circle, rgba(255, 105, 180, 0.41) 24.45%, white 75.55%); }
+  64% { background: radial-gradient(circle, rgba(255, 105, 180, 0.44) 24.60%, white 75.40%); }
+  65% { background: radial-gradient(circle, rgba(255, 105, 180, 0.47) 24.75%, white 75.25%); }
+  66% { background: radial-gradient(circle, rgba(255, 105, 180, 0.50) 24.90%, white 75.10%); }
+  67% { background: radial-gradient(circle, rgba(255, 105, 180, 0.53) 25.05%, white 74.95%); }
+  68% { background: radial-gradient(circle, rgba(255, 105, 180, 0.56) 25.20%, white 74.80%); }
+  69% { background: radial-gradient(circle, rgba(255, 105, 180, 0.59) 25.35%, white 74.65%); }
+  70% { background: radial-gradient(circle, rgba(255, 105, 180, 0.62) 25.50%, white 74.50%); }
+  71% { background: radial-gradient(circle, rgba(255, 105, 180, 0.65) 25.65%, white 74.35%); }
+  72% { background: radial-gradient(circle, rgba(255, 105, 180, 0.68) 25.80%, white 74.20%); }
+  73% { background: radial-gradient(circle, rgba(255, 105, 180, 0.71) 25.95%, white 74.05%); }
+  74% { background: radial-gradient(circle, rgba(255, 105, 180, 0.74) 26.10%, white 73.90%); }
+  75% { background: radial-gradient(circle, rgba(255, 105, 180, 0.77) 26.25%, white 73.75%); }
+  76% { background: radial-gradient(circle, rgba(255, 105, 180, 0.80) 26.40%, white 73.60%); }
+  77% { background: radial-gradient(circle, rgba(255, 105, 180, 0.83) 26.55%, white 73.45%); }
+  78% { background: radial-gradient(circle, rgba(255, 105, 180, 0.86) 26.70%, white 73.30%); }
+  79% { background: radial-gradient(circle, rgba(255, 105, 180, 0.89) 26.85%, white 73.15%); }
+  80% { background: radial-gradient(circle, rgba(255, 105, 180, 0.92) 27.00%, white 73.00%); }
+  81% { background: radial-gradient(circle, rgba(255, 105, 180, 0.95) 27.15%, white 72.85%); }
+  82% { background: radial-gradient(circle, rgba(255, 105, 180, 0.98) 27.30%, white 72.70%); }
+  83% { background: radial-gradient(circle, rgba(255, 105, 180, 1.00) 27.45%, white 72.55%); }
+  84% { background: radial-gradient(circle, rgba(255, 105, 180, 0.98) 27.60%, white 72.40%); }
+  85% { background: radial-gradient(circle, rgba(255, 105, 180, 0.95) 27.75%, white 72.25%); }
+  86% { background: radial-gradient(circle, rgba(255, 105, 180, 0.92) 27.90%, white 72.10%); }
+  87% { background: radial-gradient(circle, rgba(255, 105, 180, 0.89) 28.05%, white 71.95%); }
+  88% { background: radial-gradient(circle, rgba(255, 105, 180, 0.86) 28.20%, white 71.80%); }
+  89% { background: radial-gradient(circle, rgba(255, 105, 180, 0.83) 28.35%, white 71.65%); }
+  90% { background: radial-gradient(circle, rgba(255, 105, 180, 0.80) 28.50%, white 71.50%); }
+  91% { background: radial-gradient(circle, rgba(255, 105, 180, 0.77) 28.65%, white 71.35%); }
+  92% { background: radial-gradient(circle, rgba(255, 105, 180, 0.74) 28.80%, white 71.20%); }
+  93% { background: radial-gradient(circle, rgba(255, 105, 180, 0.71) 28.95%, white 71.05%); }
+  94% { background: radial-gradient(circle, rgba(255, 105, 180, 0.68) 29.10%, white 70.90%); }
+  95% { background: radial-gradient(circle, rgba(255, 105, 180, 0.65) 29.25%, white 70.75%); }
+  96% { background: radial-gradient(circle, rgba(255, 105, 180, 0.62) 29.40%, white 70.60%); }
+  97% { background: radial-gradient(circle, rgba(255, 105, 180, 0.59) 29.55%, white 70.45%); }
+  98% { background: radial-gradient(circle, rgba(255, 105, 180, 0.56) 29.70%, white 70.30%); }
+  99% { background: radial-gradient(circle, rgba(255, 105, 180, 0.53) 29.85%, white 70.15%); }
+}
+
+
+
+/* Flipbook wrapper untuk selalu center */
+.flipbook-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Style halaman */
+.page {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+/* Gambar menyatu sempurna, tanpa jarak */
+.page-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tombol navigasi profesional dan keren dengan pink gradasi dan animasi */
+.nav-button {
+  padding: 12px 28px;
+  background: white;
+  color: rgb(92, 92, 92);
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(255, 110, 196, 0.5);
+  cursor: pointer;
+  user-select: none;
+  letter-spacing: 0.03em;
+}
+
+/* Hover efek naik dan shadow lebih kuat */
+.nav-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 110, 196, 0.8);
+}
+
+/* Container tombol */
+.nav-container {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 1rem; /* jarak antar tombol */
+  justify-content: center; /* tengah horizontal */
+}
+
+/* Style untuk tsparticles confetti */
+#tsparticles {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 9999 !important;
+  pointer-events: none; /* Supaya tidak ganggu klik */
+}
