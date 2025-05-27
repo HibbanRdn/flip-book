@@ -34,9 +34,8 @@ function App() {
 
       {/* Audio musik */}
       <audio autoPlay loop>
-        <source src="/song/song.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
+  <source src={`${import.meta.env.BASE_URL}song/song.mp3`} type="audio/mpeg" />
+</audio>
 
       {/* Flipbook */}
       <MyFlipBook />

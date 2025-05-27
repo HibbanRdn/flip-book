@@ -56,7 +56,7 @@ function MyFlipBook() {
           {pages.map((img, idx) => (
             <div key={idx} className="page">
               <motion.img
-                src={`/images/${img}`}
+                src={`${import.meta.env.BASE_URL}images/${img}`}
                 alt={`page-${idx}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
